@@ -46,11 +46,17 @@
 
   </div>
   <script>
-  window.fcSettings = {
-    token: "7ac230c4-a2ac-441d-88e1-d028062c65f2",
-    host: "https://wchat.freshchat.com"
-  };
+   window.fcWidget.user.setProperties({
+  firstName: <fname>,
+  lastName: <lname>,
+  email: <email>,
+  phone: <phone>,
+  phoneCountry: <country_code>,
+  "plan": "Estate",
+  "status": "Active"
+});
 </script>
+ 
 <script src="https://wchat.freshchat.com/js/widget.js" async></script>
   <script>
   window.fcSettings = {
