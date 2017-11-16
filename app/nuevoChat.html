@@ -60,13 +60,15 @@ window.fcWidget.user.create().then(function() {
     });
 </script>
   <script>
-//After Widget Open/Init or loaded, getting User.
-window.fcWidget.user.get().then(function(result) {
-    console.log(result);
-    var userInfo = result.data;
-    //Do Something
-});
-</script>
+window.fcWidget.user.update({
+  firstName: 'Mayra',
+  lastName: 'Delgado',
+  email: 'name@company.com',
+  meta: {
+    userproperty1: 'value',
+    userproperty2: 'value',
+    userproperty3: 'value'
+  }
    
 <script src="https://wchat.freshchat.com/js/widget.js" async></script>
 
