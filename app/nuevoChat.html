@@ -61,7 +61,7 @@
             }
           }
         }, function(error) {                // User Not Created
-          window.fcWidget.user.setProperties({
+         /* window.fcWidget.user.setProperties({
             firstName: "Mayra",              // user’s first name
             lastName: "Delgado",                // user’s last name
             email: "mayra.delgado@metricamovil.com",    // user’s email address
@@ -69,7 +69,7 @@
             phoneCountryCode: "52",         // phone’s country code
             plan: "Estate",                 // user's meta property 1
             status: "Active",               // user's meta property 2
-            "Last Payment": "12th August"   // user's meta property 3
+            "Last Payment": "12th August"   // user's meta property 3*/
           });
           window.fcWidget.on('user:created', function(resp) {
             var status = resp && resp.status,
