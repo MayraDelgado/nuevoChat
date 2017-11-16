@@ -53,13 +53,12 @@
   };
 </script>
   <script>
-//After Widget Open/Init or loaded, getting User.
-window.fcWidget.user.get().then(function(result) {
-    console.log(result);
-    var userInfo = result.data;
-    //Do Something
-});
-  </script>
+window.fcWidget.user.create().then(function() {
+    console.log('User Created');
+    }, function() {
+    console.log("User Not Created");
+    });
+</script>
    
 <script src="https://wchat.freshchat.com/js/widget.js" async></script>
 
