@@ -46,14 +46,7 @@
 
   </div>
  
-<script src="https://wchat.freshchat.com/js/widget.js" async></script>
-  <script>
-//After Widget Open/Init or loaded, getting User.
-window.fcWidget.user.get().then(function(result) {
-    console.log(result);
-    var userInfo = result.data;
-    //Do Something
-});
+<script src="https://wchat.freshchat.com/js/widget.js" async></script>  
 </script>
   <script>
   window.fcSettings = {
@@ -61,6 +54,13 @@ window.fcWidget.user.get().then(function(result) {
     host: "https://wchat.freshchat.com"    
   };
 </script>
+  <script>
+//After Widget Open/Init or loaded, getting User.
+window.fcWidget.user.get().then(function(result) {
+    console.log(result);
+    var userInfo = result.data;
+    //Do Something
+});
 <script src="https://wchat.freshchat.com/js/widget.js" async></script>
 
 </body>
