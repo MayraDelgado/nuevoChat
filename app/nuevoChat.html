@@ -48,15 +48,17 @@
  
 <script src="https://wchat.freshchat.com/js/widget.js" async></script>
   <script>
+//After Widget Open/Init or loaded, getting User.
+window.fcWidget.user.get().then(function(result) {
+    console.log(result);
+    var userInfo = result.data;
+    //Do Something
+});
+</script>
+  <script>
   window.fcSettings = {
     token: "7ac230c4-a2ac-441d-88e1-d028062c65f2",
-    host: "https://wchat.freshchat.com",
-    externalId: "mayra.delgado@metricamovil.com",     // user’s id unique to your system
-    firstName: " ",              // user’s first name
-    lastName: " ",                // user’s last name
-    email: " ",    // user’s email address
-    phone: " ",            // phone number without country code
-    phoneCountryCode: "+52"          // phone’s country code
+    host: "https://wchat.freshchat.com"    
   };
 </script>
 <script src="https://wchat.freshchat.com/js/widget.js" async></script>
