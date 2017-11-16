@@ -61,6 +61,12 @@ window.fcWidget.user.get().then(function(result) {
     var userInfo = result.data;
     //Do Something
 });
+    <script>
+window.fcWidget.on("widget:closed", function(resp) {
+  console.log('Widget Closed');
+  //Function to do some task
+});
+</script>
 <script src="https://wchat.freshchat.com/js/widget.js" async></script>
 
 </body>
