@@ -45,75 +45,58 @@
     </header>
 
   </div>
- <!-- <script>
+ <script src="https://s3.amazonaws.com/snippets.freshchat.com/js/fc-pre-chat-form.js"></script>
+<script>
+  fcPreChatFormData = {
+    //Form header color and Submit button color.
+    mainbgColor: '#0aa4db',
+    //Form Header Text and Submit button text color.
+    maintxColor: '#fff',
+    //Chat Form Title
+    title: 'Gadget God',
+    //Chat form Welcome Message
+    textBanner: 'We can\'t wait to talk to you. But first, please take a couple of moments to tell us a bit about yourself.',
+    //Name field Label
+    nameLabel: 'Name',
+    //Set reqName as 'required' if you want the name field to be mandatory.
+    reqName: 'notrequired',
+    //If name field is set as mandatory, then the below message will be displayed if the field value is not valid or empty.
+    nameError: 'Please enter a valid name :)',
+    //To not display the Email, set the value to 'no'
+    showEmail: 'yes',
+    //Email field label
+    emailLabel: 'E-mail',
+    //Set reqEmail as 'required' if you want the field to be mandatory.
+    reqEmail: 'notrequired',
+    //If email field is set as mandatory, then the below message will be displayed if the field value is not valid or empty.
+    emailError: 'Please enter a valid email.',
+    //To not display the Phone, set the value to 'no'
+    showPhone: 'yes',
+    //Phone Field Label
+    phoneLabel: 'Mobile',
+    //Set reqPhone as 'required' if you want the field to be mandatory.
+    reqPhone: 'required',
+    //If phone field is set as mandatory, then the below message will be displayed if the field value is not valid or empty.
+    phoneError: 'Please enter a valid contact number',
+    //Submit Button Label.
+    SubmitLabel: 'Start Chat',
+  };
   window.fcSettings = {
-    token: "7ac230c4-a2ac-441d-88e1-d028062c65f2",
+    token: 'WEB_CHAT_TOKEN',
     host: "https://wchat.freshchat.com",
-    externalId: "mayra.delgado@metricamovil.com",             // user’s id unique to your system
+    config: {
+      cssNames: {
+        //The below element is mandatory. Please add any custom class or leave the default.
+        widget: 'custom_fc_frame',
+      }
+    },
     onInit: function() {
-      window.fcWidget.on('widget:loaded', function() {
-        window.fcWidget.user.get().then(function(resp) {
-          var status = resp && resp.status,
-              data = resp && resp.data;
-          if (status === 200) {
-            if (data.restoreId) {
-                                            // Update restoreId in your database
-            }
-          }
-        }, function(error) {                // User Not Created
-          window.fcWidget.user.setProperties({
-            firstName: "Mayra",              // user’s first name
-            lastName: "Delgado",                // user’s last name
-            email: "mayra.delgado@metricamovil.com",    // user’s email address
-            phone: " ",            // phone number without country code
-            phoneCountryCode: "52",         // phone’s country code
-            plan: "Estate",                 // user's meta property 1
-            status: "Active",               // user's meta property 2
-            "Last Payment": "12th August"   // user's meta property 3*/
-          });
-          window.fcWidget.on('user:created', function(resp) {
-            var status = resp && resp.status,
-                data = resp && resp.data;
-            if (status === 200) {
-              if (data.restoreId) {
-                                            // Update restoreId in your database
-              }
-            }
-          });
-        });
-      });
+      console.log('widget init');
+      fcPreChatform.fcWidgetInit(fcPreChatFormData);
     }
   };
 </script>
 <script src="https://wchat.freshchat.com/js/widget.js" async></script>
-  <script src="https://wchat.freshchat.com/js/widget.js" async></script>
-  <script>
-  window.fcSettings = {
-    token: "7ac230c4-a2ac-441d-88e1-d028062c65f2",
-    host: "https://wchat.freshchat.com"    
-  };
-</script>
-  <script>
-window.fcWidget.user.create().then(function() {
-    console.log('User Created');
-    }, function() {
-    console.log("User Not Created");
-    });
-</script>
-  <script>
-window.fcWidget.user.update({
-  firstName: 'Mayra',
-  lastName: 'Delgado',
-  email: 'name@company.com',
-  meta: {
-    userproperty1: 'value',
-    userproperty2: 'value',
-    userproperty3: 'value'
-  }});
-  </script> 
-   
-<script src="https://wchat.freshchat.com/js/widget.js" async></script>-->
-
 </body>
 
 </html>
